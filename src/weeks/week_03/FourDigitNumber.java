@@ -17,20 +17,7 @@ public class FourDigitNumber {
 		int number3 = (mainNumber/100) % 10;
 		int number4 = mainNumber/1000;
 		
-		System.out.println(" " + number1 + " " +  number2 + " " +  number3 + " " +  number4);
-		// creating an instance of Random class
-
-		
-		Random rand = new Random();
-		System.out.println(rand);
-		// Generating random integers in range 0 to 9
-
-		int int1 = rand.nextInt(5);
-		
-		System.out.println(int1);
-		// Printing random integer
-
-		System.out.println("Random Integer:> "+int1);
+		System.out.println(number1 * 1000 + number2 * 100 + number3 * 10 + number4);
 
 	}
 
