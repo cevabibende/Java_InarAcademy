@@ -8,14 +8,18 @@ public class S11NufusTahmini {
 		int Gocmen = YılSaniye / 45;
 		int YillikNufusArtisi = Dogum + Gocmen - Olum;
 		int SimdikiNufus = 312032486;
-		int sayac=0;
 		SimdikiNufus = SimdikiNufus + YillikNufusArtisi;
-		for(int i=0;i<6; i++) {			
-			sayac++;
-			System.out.println("Toplam nüfüs " + sayac + " .yıl " + SimdikiNufus +" olur");
+		System.out.println("1. yıl Toplam nüfüs " + SimdikiNufus +" olur");
+		SimdikiNufus = SimdikiNufus + YillikNufusArtisi;			
+		System.out.println("2. yıl Toplam nüfüs " + SimdikiNufus +" olur");
+		SimdikiNufus = SimdikiNufus + YillikNufusArtisi;
+		System.out.println("3. yıl Toplam nüfüs " + SimdikiNufus +" olur");
+		SimdikiNufus = SimdikiNufus + YillikNufusArtisi;
+		System.out.println("4. yıl Toplam nüfüs " + SimdikiNufus +" olur");
+		SimdikiNufus = SimdikiNufus + YillikNufusArtisi;
+		System.out.println("5. yıl Toplam nüfüs " + SimdikiNufus +" olur");
+
 	
 		}
 
 	}
-
-}
