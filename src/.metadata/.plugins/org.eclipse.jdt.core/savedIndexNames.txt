@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+C:\Users\Cevabý Bende\Desktop\workspace\InarAcademy\Java_InarAcademy\src\.metadata\.plugins\org.eclipse.jdt.core

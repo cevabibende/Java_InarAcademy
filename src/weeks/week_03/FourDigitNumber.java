@@ -17,7 +17,16 @@ public class FourDigitNumber {
 		int number3 = (mainNumber/100) % 10;
 		int number4 = mainNumber/1000;
 		
-		System.out.println(number1 * 1000 + number2 * 100 + number3 * 10 + number4);
+		if(number1 == 0) {
+			System.out.println("0" + (number2 * 100 + number3 * 10 + number4));
+			
+			
+		}else {
+			
+			System.out.println(number1 * 1000 + number2 * 100 + number3 * 10 + number4);
+		}
+		
+		
 
 	}
 

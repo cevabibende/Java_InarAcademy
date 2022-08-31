@@ -1,5 +1,19 @@
 package chapters.chapter01;
 
 public class S13_Cebir {
+	public static void main(String[] args) {
+		double a = 3.4;
+		double b = 50.2;
+		double e = 44.5;
+
+		double c = 2.1;
+		double d = 0.55;
+		double f = 5.9;
+
+		double x = (e * d - b * f) / (a * d - b * c);
+		double y = (a * f - a * c) / (e * d - b * c);
+
+		System.out.println("x = " + x + " y = " + y);
+	}
 
 }
