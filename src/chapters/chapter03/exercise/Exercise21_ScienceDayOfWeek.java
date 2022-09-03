@@ -1,8 +1,11 @@
 package chapters.chapter03.exercise;
 
-public class dd {
+import java.util.Scanner;
+public class Exercise21_ScienceDayOfWeek {	
+	
 	public static void main(String[] args) {
-		System.out.println(0 % 6);
+		j
 	}
 
+	
 }

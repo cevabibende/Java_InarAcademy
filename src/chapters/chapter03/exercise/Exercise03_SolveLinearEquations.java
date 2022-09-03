@@ -1,0 +1,31 @@
+package chapters.chapter03.exercise;
+
+import java.util.Scanner;
+
+public class Exercise03_SolveLinearEquations {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("enter a, b, c, d, e, f values:");
+		
+		double a = input.nextDouble();
+		double b = input.nextDouble();
+		double c = input.nextDouble();
+		
+		double d = input.nextDouble();
+		double e = input.nextDouble();
+		double f = input.nextDouble();
+		
+		double x = (e * d - b * f) / (a * d - b * c);
+		double y = (a * f - e * c) / (a * d - b * c);
+		
+		if (((a * d) - (b * c)) == 0) {
+			System.out.println("The equation has no solution.");
+		}else {
+			System.out.println("x value is: " + x + " y value is: " + y);
+		}
+		
+		
+	}
+
+}

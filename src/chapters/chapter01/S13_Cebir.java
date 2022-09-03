@@ -11,8 +11,8 @@ public class S13_Cebir {
 		double f = 5.9;
 
 		double x = (e * d - b * f) / (a * d - b * c);
-		double y = (a * f - a * c) / (e * d - b * c);
-
+		double y = (a * f - e * c) / (a * d - b * c);
+		
 		System.out.println("x = " + x + " y = " + y);
 	}
 
