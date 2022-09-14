@@ -14,7 +14,9 @@ public class Exercise07_KacYil {
 		
 		int gun = (girilenDakika % ( 365 * 24 * 60)) / (24 * 60);
 		
-		int dakika = 3;
+		int saat = (girilenDakika % ( 365 * 24 * 60)) / (24 * 60);
+		
+		System.out.println(yil + " yıl " + gun + " gun " + girilenDakika + " dakika ");
 		}
 
 }

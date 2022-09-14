@@ -17,7 +17,7 @@ public class Exercise23_CostDriving {
 
 		double costOfDriving = (distance / milesPerGallon) * pricePerGallon;
 		
-		System.out.println("The cost of driving is $"  + (int)(costOfDriving *100) / 100.0);
+		System.out.println("The cost of driving is $"  + (int)(costOfDriving * 100) / 100.0);
 		
 	}
 
