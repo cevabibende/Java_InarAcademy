@@ -2,13 +2,17 @@ package chapters.chapter05.checkpoint;
 
 public class Cp_05_25_02 {
     public static void main(String[] args) {
-        int balance = 10;
-        while(true){
-            if(balance < 9){
+        int i = 0;
+        int sum = 0;
+        while (i < 4) {
+            if (i % 3 == 0) {
+                i++; //we added the i++ line//
                 continue;
             }
-            balance = balance - 9;
+            sum += i;
+            i++;
+
         }
-        System.out.println("balance is " + balance);
+        System.out.println("sum is: " + sum);
     }
 }

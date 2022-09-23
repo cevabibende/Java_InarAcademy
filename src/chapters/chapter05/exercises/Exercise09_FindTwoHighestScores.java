@@ -14,7 +14,7 @@ public class Exercise09_FindTwoHighestScores {
 		int numberStudent = input.nextInt();
 		System.out.println("Enter each student’s name and score");
 		for(int i = 0; i < numberStudent; i++) {
-			System.out.println("student: " + (i+1) + " ----name:");
+			System.out.println("student: " + (i + 1) + " ----name:");
 			String name = input.next();
 			System.out.println("student's score: ");
 			int score = input.nextInt();
@@ -29,8 +29,8 @@ public class Exercise09_FindTwoHighestScores {
 				secondScoreName = name;
 			}
 		}
-		System.out.println(highScoreName);
-		System.out.println(secondScoreName);
+		System.out.println("highScoreName ---" +highScoreName + " --- highScore--- " + highScore);
+		System.out.println("secondScoreName ---" + secondScoreName + " --- secondScore--- " + secondScore);
 	}
 
 }
