@@ -2,19 +2,22 @@ package chapters.chapter05.exercises;
 
 import java.util.Scanner;
 public class dene {
+
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.println("enter 2 digit number");
-		int num1 = input.nextInt();
-		int num2 = input.nextInt();
-		int gcd = num1 < num2 ? num1 : num2;
-
-		while(gcd > 0) {
-			if (num1 % gcd == 0 && num2 % gcd == 0) {
-				System.out.println(gcd);
-				break;
+		System.out.println("Enter a number of lines( 1 to 15) for pyramid : ");
+		int lines = input.nextInt();
+		for (int i = 1; i <= lines; i++) {
+			for (int s = 1; s <= lines - i; s++) {
+				System.out.print("   ");
 			}
-			gcd--;
+			for (int j = i; j > 0; j--) {
+				System.out.printf("%3d" ,j);
+			}
+			for (int m = 2; m < i+1; m++) {
+				System.out.printf("%3d",m);
+			}
+			System.out.println();
 		}
 	}
 }
