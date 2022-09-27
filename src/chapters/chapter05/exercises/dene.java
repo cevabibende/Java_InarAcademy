@@ -4,20 +4,22 @@ import java.util.Scanner;
 public class dene {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Enter a number of lines( 1 to 15) for pyramid : ");
-		int lines = input.nextInt();
-		for (int i = 1; i <= lines; i++) {
-			for (int s = 1; s <= lines - i; s++) {
-				System.out.print("   ");
-			}
-			for (int j = i; j > 0; j--) {
-				System.out.printf("%3d" ,j);
-			}
-			for (int m = 2; m < i+1; m++) {
-				System.out.printf("%3d",m);
-			}
-			System.out.println();
+
+		double sumLeftToRight = 0.0;
+		double sumRightToLeft = 0.0;
+
+		for (double n = 1; n <= 50000.0; n++) {
+			sumLeftToRight += (1 / n);
+
 		}
+		for (double n2 = 50000.0; n2 > 0; n2--) {
+			sumRightToLeft  += (1 / n2);
+
+		}
+
+		System.out.println("Left to right sum is= " + sumLeftToRight );
+		System.out.println("Right to left sum is= " + sumRightToLeft);
+		System.out.println("The differences between them : " +(sumLeftToRight-sumRightToLeft));
 	}
+
 }
