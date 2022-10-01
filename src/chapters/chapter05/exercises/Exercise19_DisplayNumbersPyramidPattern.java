@@ -7,11 +7,12 @@ public class Exercise19_DisplayNumbersPyramidPattern {
         for (int i = 1; i <= 8; i++) {
             for (int j = 1; j <= 8 - i; j++) {
                 System.out.print("    ");
-
             }
+
             for (int k = 0; k < i; k++) {
                 System.out.printf("%4d",(int) Math.pow(2, k) );
             }
+
             for(int l = i-2 ; l >=0 ; l--){
                 System.out.printf("%4d",(int) Math.pow(2, l));
             }
