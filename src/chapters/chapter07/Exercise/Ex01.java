@@ -11,13 +11,9 @@ public class Ex01 {
 
 
         double[] scores = getScores(input, numberOfStudent);
-
         double bestScore = getBestScore(numberOfStudent, scores);
-
         getGrades(scores, bestScore);
-
     }
-
     private static void getGrades(double[] scores, double bestScore) {
         for (int i = 0; i < scores.length; i++) {
             if (scores[i] >= bestScore - 10){
@@ -33,7 +29,6 @@ public class Ex01 {
             }
         }
     }
-
     private static double getBestScore(int numberOfStudent, double[] scores) {
         double bestScore = scores[0];
         for (int i = 1; i < numberOfStudent; i++) {
@@ -43,7 +38,6 @@ public class Ex01 {
         }
         return bestScore;
     }
-
     private static double[] getScores(Scanner input, int numberOfStudent) {
         System.out.println("Enter " + numberOfStudent + " scores");
         double[] scores = new double[numberOfStudent];
