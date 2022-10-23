@@ -1,59 +1,87 @@
 package chapters.chapter07.Exercise;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class denem {
     public static void main(String[] args) {
         /*
-                    (Computing gcd) Write a method that returns the gcd of an unspecified number
-            of integers. The method header is specified as follows:
-            public static int gcd(int... numbers)
-            Write a test program that prompts the user to enter five numbers, invokes the
-            method to find the gcd of these numbers, and displays the gcd.
-            -5 sayı girilecek hepsinin obebi buluncak ortak.
-            -obeb bulurken sayıların en küçügüne kadar bölüncek
+              Sort Student
+        -prompts to user to enter the number of student
+            -students name
+            -their scores
+        -print student names in decreasing order of their scores
          */
 
-        final int NUMBER = 5;
-        int[] numbers = new int[NUMBER];
-        System.out.println("Enter " + NUMBER + " number");
-        for (int i = 0; i < numbers.length; i++) {
-            Scanner input = new Scanner(System.in);
-            numbers[i] = input.nextInt();
-        }
-        int gcd = gcd(numbers);
-        System.out.println("The gcd is " + gcd);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number of student ");
+        int numberOfStudent = input.nextInt();
+        input.nextLine();
+
+        String[] names = new String[numberOfStudent];
+        getNamesOfStudent(names, input);
+
+        int[] scores = new int[numberOfStudent];
+        getScores(scores,input);
+
+        System.out.println(Arrays.toString(names));
+        System.out.println(Arrays.toString(scores));
+
+        sortDecreasingOrderTheNames(names, scores);
+        printNames(names, scores);
+
 
     }
 
-    public static int gcd(int[] numbers) {
-        int gcd = 1;
-        int min = getMin(numbers);
-        int divisor = 2;
+    public static void printNames(String[] names, int[] scores) {
+        for (int i = 0; i <names.length ; i++) {
+            System.out.println(names[i] + "--> " + scores[i] + " points");
+        }
+    }
 
-        while (divisor <= min) {
-            boolean gcdDivide = true;
-            for (int i = 0; i < numbers.length; i++) {
-                if (numbers[i] % divisor != 0) {
-                    gcdDivide = false;
-                    break;
+    public static void sortDecreasingOrderTheNames(String[] names, int[] scores) {
+
+        for (int i = 0; i < scores.length; i++) {   //50 80 90  //esad , derda , ali
+            int maxScore = scores[i];
+            int maxIndex=i;
+            String temp="";
+
+            for (int j = i + 1; j < scores.length; j++) {
+                if (maxScore < scores[j]) {
+                    maxScore = scores[j];
+                    maxIndex=j;
+
                 }
+
             }
-            if (gcdDivide) {
-                gcd = divisor;
+            if(maxIndex!=i){
+                temp=names[i];
+                names[i]=names[maxIndex];
+                names[maxIndex]=temp;
+
+                scores[maxIndex]=scores[i];
+                scores[i]=maxScore;
             }
-            divisor++;
+
+
         }
-        return gcd;
+
+
     }
 
-    public static int getMin(int[] numbers) {
-        int min = numbers[0];
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] < min) {
-                min = numbers[i];
-            }
+    public static void getScores(int[] scores,Scanner input){
+        System.out.println("Enter scores :");
+        for (int i = 0; i < scores.length; i++) {
+            scores[i] = input.nextInt();
         }
-        return min;
+    }
+
+    public static void getNamesOfStudent(String[] names, Scanner input) {
+        System.out.println("Enter names :");
+        for (int i = 0; i < names.length; i++) {
+            names[i] = input.nextLine();
+
+        }
+
     }
 }

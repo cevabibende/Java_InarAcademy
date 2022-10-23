@@ -13,5 +13,10 @@ public class SoonraKontrolEt {
     Ex14
     boolean kısmına tekrar bak
      */
+       /*
+    Ex16
+    komple bak
+     */
+
 
 }
