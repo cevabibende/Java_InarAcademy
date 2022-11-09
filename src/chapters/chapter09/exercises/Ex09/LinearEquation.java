@@ -1,4 +1,4 @@
-package chapters.chapter09.exercises;
+package chapters.chapter09.exercises.Ex09;
 
 public class LinearEquation {
     private double a;
