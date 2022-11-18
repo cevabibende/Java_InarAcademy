@@ -1,8 +1,6 @@
-package chapters.chapter11.exercises.ex03;
+package chapters.chapter11.exercises.Ex03;
 
 import chapters.chapter09.exercises.Ex07.Account;
-
-import java.util.Date;
 
 public class CheckingAccount extends Account {
     private double limit;
