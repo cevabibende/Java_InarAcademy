@@ -1,0 +1,6 @@
+ali:90
+ayşe:80
+ekrem:10
+veli:90
+emel:80
+eylem:10
